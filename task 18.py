@@ -10,29 +10,47 @@
 # 6
 # -> 5
 
-# col = int(input('Введите длинну массива: '))
+col = int(input('Введите длинну массива: '))
 
-# array = list()
-# from random import randint 
-# for _ in range(col):
-#     array.append(randint(0, col))
+array = list()
+from random import randint 
+for _ in range(col):
+    array.append(randint(0, col))
 
-# print(array)
+print(array)
 
-# numb = int(input('Введите число которое необходимо найти: '))
+numb = int(input('Введите число которое необходимо найти: '))
 
-# ar= sorted(array)
-# print(ar)
-# a=list()
-# for i in range(len(ar)):
-#     res = ar[i]-numb
-#     a.append(res)
-# sorted(a)
-# print(a)
-    
-l = [5, 78, 45, 12, 56, 9999]
 
-def nearest(lst, target):
-  return min(lst, key=lambda x: abs(x-target))
 
-print(nearest(l, 2))
+s = min(array, key= lambda x: abs(x-numb) ) # переебирает весь массив и из 
+# каждого элемента массива вычитает заданное число, сравнивает по модулю и показывает минимальное 
+
+print(s)  
+
+# from random import randint
+# n = int(input('Введите количество элементов: '))
+# lst = [randint(1, n) for i in range(n)]
+# print(lst)
+
+# input_set = set(lst)
+
+# num = int(input('Введите искомое число: '))
+# dif = 0
+# if num > max(input_set):
+#     print(max(input_set))
+# elif num < min(input_set):
+#     print(min(input_set))
+# else:
+#     while True: # Есть возможность запускать бесконечный цикл
+#         if num - dif in input_set and num + dif in input_set and num - dif != num + dif: # Конструкция сравнивает значение выражения сo значениями во множестве 
+#             print(num - dif, num + dif)
+#             break
+#         elif num - dif in input_set:
+#             print(num - dif)
+#             break
+#         elif num + dif in input_set:
+#             print(num + dif)
+#             break
+#         else:
+#             dif += 1
